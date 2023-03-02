@@ -11,16 +11,16 @@ function myAppendElement(containerElement , htmlElement){
     containerElement.append(htmlElement);
 }
 
-
-
-
 // Board Box
 
-const boardBox = document.querySelector('.board');
-        
-        // Ciclo for per generare celle 
-for(let i = 1 ; i <= 100; i++){
-    const createdElement = elementCreator('div', 'cell', i);
-    myAppendElement(boardBox,createdElement);
-}
+//Evento 
 
+const button = document.getElementById('match_start');
+const boardBox = document.querySelector('.board');
+button.addEventListener('click', 
+        function(){
+// Ciclo for per generare celle 
+for(let i = 1 ; i <= 100; i++){
+const createdElement = elementCreator('div', 'cell', i);
+myAppendElement(boardBox,createdElement);
+}})
