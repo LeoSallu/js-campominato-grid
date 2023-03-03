@@ -17,6 +17,7 @@ const boardBox = document.querySelector('.board');
 //Button Generazione Celle
 button.addEventListener('click', 
         function(){
+        boardBox.innerHTML = '';
 // Ciclo for per generare celle 
     for(let i = 1 ; i <= 100; i++){
         const createdElement = elementCreator('div', 'cell', i);
